@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/menudb
+    username: swcamp
+    password: swcamp
+
+mybatis:
+  mapper-locations: com/**/*.xml
