@@ -12,7 +12,7 @@
         <result property="orderableStatus" column="ORDERABLE_STATUS"/>
     </resultMap>
 
-    <select id="selectAllByOrderableStatus" parameterType="string" resultMap="menuResultMap">
+    <select id="selectAllMenuByOrderableStatus" parameterType="string" resultMap="menuResultMap">
         SELECT
                A.MENU_CODE
              , A.MENU_NAME
