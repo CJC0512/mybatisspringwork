@@ -31,16 +31,16 @@ public class OrderService {
     public void registNewOrder(OrderDTO orderInfo){
 
         /* 설명. 1. 주문한 메뉴 코드 추출(DTO에서) */
-//        List<Integer> menuCode = orderInfo.getOrderMenus()
-//                                .stream()
-//                                .map(OrderMenuDTO::getMenuCode)
-//                                .collect(Collectors.toList());
+        List<Integer> menuCode = orderInfo.getOrderMenus()
+                                .stream()
+                                .map(OrderMenuDTO::getMenuCode)
+                                .collect(Collectors.toList());
 
-        List<Integer> menuCode = new ArrayList<>();
-        List<OrderMenuDTO> orderMenus = orderInfo.getOrderMenus();
-        for (OrderMenuDTO orderMenu : orderMenus){
-            menuCode.add(orderMenu.getMenuCode());
-        }
+//        List<Integer> menuCode = new ArrayList<>();
+//        List<OrderMenuDTO> orderMenus = orderInfo.getOrderMenus();
+//        for (OrderMenuDTO orderMenu : orderMenus){
+//            menuCode.add(orderMenu.getMenuCode());
+//        }
 
 //        System.out.println("menuCode = " + menuCode);
         Map<String, List<Integer>> map = new HashMap<>();

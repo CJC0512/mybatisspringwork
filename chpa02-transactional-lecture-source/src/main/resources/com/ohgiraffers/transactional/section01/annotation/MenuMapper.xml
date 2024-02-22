@@ -10,7 +10,7 @@
         <result property="categoryCode" column="CATEGORY_CODE"/>
         <result property="orderableStatus" column="ORDERABLE_STATUS"/>
     </resultMap>
-    <select id="selectMenuByMenuCodes"  resultMap="menuResultMap" parameterType="hashmap">
+    <select id="selectMenuByMenuCodes" resultMap="menuResultMap" parameterType="hashmap">
         SELECT
                A.MENU_CODE
              , A.MENU_NAME
