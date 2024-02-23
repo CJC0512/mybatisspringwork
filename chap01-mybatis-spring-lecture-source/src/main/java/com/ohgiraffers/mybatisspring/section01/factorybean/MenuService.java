@@ -17,6 +17,6 @@ public class MenuService {
     }
 
     public List<MenuDTO> findAllMenuByOrderableStatus(String orderableStatus){
-        return sqlSession.getMapper(MenuMapper.class).selectAllByOrderableStatus(orderableStatus);
+        return sqlSession.getMapper(MenuMapper.class).selectAllMenuByOrderableStatus(orderableStatus);
     }
 }
