@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -16,6 +17,9 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+
+/* 설명. DML(insert, update, delete) 작업 테스트 시, 실제 DB 적용을 안 하려면 @Transactional 어노테이션을 추가한다.*/
+//@Transactional  // 테스트용이니 커밋을 날리지마라. 라는 뜻
 class OrderServiceTest {
 
     @Autowired
